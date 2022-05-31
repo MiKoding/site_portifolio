@@ -19,6 +19,7 @@
     background: slategrey;
     border-radius: 30px;
 }
+/*====*/
 
 .max-width{
     max-width: 13000px;
@@ -124,7 +125,7 @@
 section{
     padding: 100px 0px;
 }
-.about{
+.about, .services{
     font-family: 'Poppins',Arial, sans-serif;
 }
 
@@ -221,6 +222,11 @@ section{
     cursor: pointer;
     display: none;
     transition: color 0.3s ease;
+}
+
+/* iniicio seção de experiencias*/
+.services{
+    
 }
 
 /*responsivo*/
