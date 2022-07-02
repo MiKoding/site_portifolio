@@ -121,15 +121,11 @@
     background: none;
 }
  
-/*secao sobre*/
+/* todos os css iguais*/
 section{
     padding: 100px 0px;
 }
-.about, .services{
-    font-family: 'Poppins',Arial, sans-serif;
-}
-
-.about .title{
+section .title{
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -138,7 +134,7 @@ section{
     padding-bottom: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.about .title::before{
+section .title::before{
     content: "";
     position:absolute;
     bottom: 0px;
@@ -150,8 +146,8 @@ section{
     background: #111;
     transform: translateX(-50%);
 }
-.about .title::after{
-    content: "Quem eu sou";
+section .title::after{
+    
     position:absolute;
     bottom: -12px;
     left: 50%;
@@ -161,7 +157,19 @@ section{
     background: #fff;
     transform: translateX(-50%);
 }
-.about .about-content{
+/*secao sobre*/
+
+.about, .services{
+    font-family: 'Poppins',Arial, sans-serif;
+}
+
+
+.about .title::after{
+content: "Quem eu sou?";
+}
+
+.about .about-content,
+.services .serv-content{
     display:flex ;
     flex-wrap: wrap;
     align-items: center;
@@ -210,11 +218,6 @@ section{
     background: none;
 }
 
-
-
-
-
-
 /* menu para celular*/
 .menu-btn{
     color:#fff;
@@ -224,11 +227,53 @@ section{
     transition: color 0.3s ease;
 }
 
-/* iniicio seção de experiencias*/
+/* iniicio seção services*/
 .services{
+    color:#fff;
+    background: #111;
+}
+.services .title::before{
+    background: #fff;
+}
+.services .title::after{
+    background: #111;
+    content: "O que eu faço?";
     
 }
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 
+}
+.services .serv-content .card:hover{
+    background: #b41b1b;
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .serv-content .card ion-icon{
+font-size: 50px;
+color: #b41b1b;
+transition: all 0.3s ease;
+}
+.services .serv-content .card:hover ion-icon{
+color: #fff;
+}
+
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0 ;
+}
 /*responsivo*/
 @media (max-width: 1300px){
     .home .max-width{
@@ -305,6 +350,11 @@ section{
 
     }
 
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
 }
 @media (max-width: 690px){
     .max-width{
@@ -318,8 +368,11 @@ section{
     
     }.home .home-content a{
         font-size: 20px;
-        padding: 9px 25px;
 
+    }
+    .services .serv-content .card{
+        width: 100%; 
+        
     }
     
 }
